@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Lexend+Deca&family=Outfit:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+}
+body{
+    font-size: 15px;
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: 'Lexen Deca', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main, footer{
+    padding: 2rem 0;
+}
+p{
+    line-height: 1.6rem;
+    padding: 1rem 0;
+    opacity: .75;
+}
+p, div.btn{
+    font-family: 'Lexend Deca', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+}
+main.container{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 80%;
+    border: 1px solid transparent;
+    color: #fff;
+}
+.cards .card:first-child{
+    background-color: var(--bright-orange);
+    border-radius: .6rem 0 0 .6rem;
+}
+.cards .card:nth-child(2){
+    background-color: var(--dark-cyan);
+}
+.cards .card:last-child{
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 .6rem .6rem 0;
+}
+.card > * {
+    padding: 1rem 0;
+}
+.card{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.card .btn{
+    width: 75%;
+    cursor: pointer;
+    background-color: #fff;
+    text-align: center;
+    border: 1.6px solid #fff;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    margin-top: auto;
+}
+.cards .card .btn:hover{
+    background-color: transparent;
+    transition: all .2s;
+    color: #fff;
+}
+.card:first-child .btn{
+    color: var(--bright-orange);
+}
+.card:nth-child(2) .btn{
+    color: var(--dark-cyan);
+}
+.card:last-child .btn{
+    color: var(--very-dark-cyan);
+}
+/*Footer*/
+footer .attribution{
+    text-align: center;
+    font-family: 'Lexen Deca', sans-serif;
+}
+@media (width < 65rem){
+    .cards{
+        flex-wrap: wrap;
+    }
+    .cards .card:first-child{
+        border-radius: .6rem .6rem 0 0 ;
+    }
+    .cards .card:last-child{
+        border-radius: 0 0 .6rem .6rem;
+    }
+}
